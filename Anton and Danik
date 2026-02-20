@@ -1,0 +1,12 @@
+n = int(input())
+s = input().strip()
+
+anton_wins = s.count('A')
+dank_wins = s.count('D')
+
+if anton_wins > dank_wins:
+    print("Anton")
+elif dank_wins > anton_wins:
+    print("Danik")      # Note: output says "Danik" even though input says "Dank"
+else:
+    print("Friendship")

@@ -1,0 +1,13 @@
+# Read input values
+a, b = map(int, input().split())
+
+years = 0
+
+# Keep looping until Liam's weight becomes strictly greater than Bob's
+while a <= b:
+    a = a * 3  # Liam's weight triples each year
+    b = b * 2  # Bob's weight doubles each year
+    years += 1
+
+# Output the number of years
+print(years)

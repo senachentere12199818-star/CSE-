@@ -1,0 +1,9 @@
+# Find the position of 1
+for i in range(5):
+    row = list(map(int, input().split()))
+    for j in range(5):
+        if row[j] == 1:
+            # Calculate moves to center (row 3, col 3)
+            moves = abs(i - 2) + abs(j - 2)  # i,j are 0-based, center is at index 2
+            print(moves)
+            exit()

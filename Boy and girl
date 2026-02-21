@@ -1,0 +1,12 @@
+# Read input
+username = input().strip()
+
+# Count distinct characters
+distinct_chars = set(username)
+count = len(distinct_chars)
+
+# Determine gender based on parity
+if count % 2 == 0:
+    print("CHAT WITH HER!")
+else:
+    print("IGNORE HIM!")

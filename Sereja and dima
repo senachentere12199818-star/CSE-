@@ -1,0 +1,28 @@
+n = int(input())
+cards = list(map(int, input().split()))
+
+sereja_score = 0
+dima_score = 0
+left = 0
+right = n - 1
+turn = 0  # 0 for Sereja, 1 for Dima
+
+while left <= right:
+    # Choose the larger card between leftmost and rightmost
+    if cards[left] > cards[right]:
+        chosen = cards[left]
+        left += 1
+    else:
+        chosen = cards[right]
+        right -= 1
+    
+    # Add to appropriate player's score
+    if turn == 0:
+        sereja_score += chosen
+    else:
+        dima_score += chosen
+    
+    # Switch turns
+    turn = 1 - turn
+
+print(sereja_score, dima_score)

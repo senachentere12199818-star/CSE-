@@ -1,0 +1,13 @@
+n = int(input())
+events =list(map(int,input(). split ()))
+available_officer = 0
+untreated_crime = 0
+for event in events:
+    if event == -1:
+        if available_officer > 0:
+            available_officer -= 1
+        else:
+            untreated_crime += 1
+    else:
+         available_officer += event 
+print(untreated_crime)

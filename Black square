@@ -1,0 +1,13 @@
+calories = list(map(int, input().split()))
+strips = input().strip()
+energy = 0
+for strip in strips:
+    if strip == "1":
+        energy += calories[0]
+    elif strip == "2":
+        energy += calories[1]
+    elif strip == "3":
+        energy += calories[2]
+    elif strip == "4":
+        energy += calories[3]
+print(energy)
